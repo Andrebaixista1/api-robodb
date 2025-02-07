@@ -70,7 +70,9 @@ async function fetch_data_vd(start_date, end_date) {
                             "empresa": entry["empresa"],
                             "data_formalizacao": format_date(item.datas?.data_formalizacao),
                             "data_cadastro": format_date(item.datas?.cadastro),
+                            "cadastro": format_date(item.datas?.cadastro),
                             "data_pagamento": format_date(item.datas?.pagamento),
+                            "pagamento": format_date(item.datas?.pagamento),
                             "data_status_api": format_date(item.api?.data_status_api),
                             "data_atualizacao_api": format_date(item.api?.data_atualizacao_api),
                             "dt_ultima_tentativa_api": format_date(item.api?.dt_ultima_tentativa_api),
@@ -145,6 +147,7 @@ async function fetch_data_vd(start_date, end_date) {
                             "substatus": item.substatus || "NÃO INFORMADO",
                             "status_nome": item.status_nome || "NÃO INFORMADO",
                             "tipo_cadastro": item.tipo_cadastro || "NÃO INFORMADO",
+                            "data_status": format_date(item.data_status),
 
                             // Dados do usuário
                             "usuario_id": item.usuario_id || "NÃO INFORMADO",
@@ -161,6 +164,10 @@ async function fetch_data_vd(start_date, end_date) {
                             // Dados do cliente
                             "cliente_id": item.cliente?.cliente_id || "NÃO INFORMADO",
                             "cliente_cpf": item.cliente?.cliente_cpf || "NÃO INFORMADO",
+                            "cliente_sexo": item.cliente?.cliente_sexo || "NÃO INFORMADO",
+                            "nascimento": item.cliente?.nascimento || "NÃO INFORMADO",
+                            "analfabeto": item.cliente?.analfabeto || "NÃO INFORMADO",
+                            "nao_perturbe": item.cliente?.nao_perturbe || "NÃO INFORMADO",
                             "cliente_nome": item.cliente?.cliente_nome || "NÃO INFORMADO",
                             "cep": item.cliente?.endereco?.cep || "NÃO INFORMADO",
                             "cidade": item.cliente?.endereco?.cidade || "NÃO INFORMADO",

@@ -26,24 +26,26 @@ function runScript(script) {
 async function main() {
     while (true) {
         try {
+            console.clear()
             console.log("🚀 Iniciando execução dos scripts...\n");
-
-            await runScript('cadastrados_supa.js'); // Depois, executa outro_script.js
-            console.log("\n🔹 Cadastrados Supabase finalizado...\n");
+            
+            await runScript('cadastrados_online.js'); // Depois, executa outro_script.js
+            console.log("\n🔹 Cadastrados Vieira_Online finalizado...\n");
             await sleep(15000); // 15 segundos
             
-            await runScript('forms_supa.js'); // Depois, executa outro_script.js
-            console.log("\n🔹 Formalizacao Supabase finalizado...\n");
-            await sleep(15000); // 15 segundos
+            // await runScript('forms_supa.js'); // Depois, executa outro_script.js
+            // console.log("\n🔹 Formalizacao Supabase finalizado...\n");
+            // await sleep(15000); // 15 segundos
 
-            await runScript('pagos_supa.js'); // Depois, executa outro_script.js
-            console.log("\n🔹 Pagos Supabase finalizado...\n");
-            await sleep(15000); // 15 segundos
-
+            // await runScript('pagos_supa.js'); // Depois, executa outro_script.js
+            // console.log("\n🔹 Pagos Supabase finalizado...\n");
+            // await sleep(15000); // 15 segundos
+            console.clear()
             await runScript('pagos_local.js');  // Roda primeiro o pagos_local.js
             console.log("\n🔹 Pagos finalizado...\n");
             await sleep(15000); // 15 segundos
 
+            console.clear()
             await runScript('form_local.js'); // Depois, executa outro_script.js
             console.log("\n🔹 Formalização finalizado...\n");
             await sleep(15000); // 15 segundos
